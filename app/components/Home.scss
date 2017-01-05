@@ -1,0 +1,46 @@
+.container {
+  position: relative;
+  padding-top: 50px;
+  left: 0px;
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+
+.container {
+  h2 {
+	font-size: 5rem;
+  }
+}
+
+.container a {
+  font-size: 1.4rem;
+}
+
+.loginForm {
+	padding: 20px;
+  background-color: rgb(237,237,237);
+	height: 139px;
+	span{
+		float: left;
+		width: 100px;
+	}
+	div div div{
+		float: left;
+		width: 240px;
+	}
+
+	.formElement{
+		margin-bottom: 20px;
+
+	}
+
+	a{
+		color: black;
+	}
+
+	.bottomButton{
+		position: absolute;
+		bottom: 20px;
+		width: 340px;
+	}
+}

@@ -1,4 +1,5 @@
 import { app, BrowserWindow, Menu, shell } from 'electron';
+const {ipcMain} = require('electron')
 
 let menu;
 let template;
@@ -38,13 +39,19 @@ const installExtensions = async () => {
   }
 };
 
+ipcMain.on('setWindow', () => {
+  mainWindow.setSize(800, 600);
+})
+
 app.on('ready', async () => {
   await installExtensions();
 
   mainWindow = new BrowserWindow({
     show: false,
-    width: 1024,
-    height: 728
+    width: 380,
+    height: 280,
+    frame: false,
+    movable: true
   });
 
   mainWindow.loadURL(`file://${__dirname}/app.html`);
