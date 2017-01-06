@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import React from 'react';
 import { mount } from 'enzyme';
 import { Provider } from 'react-redux';
-import CounterPage from '../../app/containers/CounterPage';
+import CounterPage from '../../app/scripts/home/homePage';
 import configureStore from '../../app/store/configureStore';
 
 

@@ -1,9 +1,9 @@
 // @flow
 import React from 'react';
 import {Router, Route, IndexRoute, browserHistory } from 'react-router';
-import App from './containers/App';
-import HomePage from './containers/HomePage';
-import CounterPage from './containers/CounterPage';
+import App from './scripts/App';
+import HomePage from './scripts/login/loginPage';
+import CounterPage from './scripts/home/homePage';
 
 
 export default (

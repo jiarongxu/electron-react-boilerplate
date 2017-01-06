@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import { spy } from 'sinon';
 import React from 'react';
 import { shallow } from 'enzyme';
-import Counter from '../../app/components/Counter';
+import Counter from '../../app/scripts/home/homeComponent';
 
 
 function setup() {

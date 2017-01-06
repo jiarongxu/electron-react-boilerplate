@@ -40,8 +40,8 @@ const installExtensions = async () => {
 };
 
 ipcMain.on('setWindow', () => {
-  mainWindow.setSize(800, 600);
-})
+  mainWindow.setSize(840, 510);
+});
 
 app.on('ready', async () => {
   await installExtensions();

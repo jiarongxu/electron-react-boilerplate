@@ -2,8 +2,8 @@ import { Application } from 'spectron';
 import { expect } from 'chai';
 import electronPath from 'electron';
 import path from 'path';
-import homeStyles from '../app/components/Home.scss';
-import counterStyles from '../app/components/Counter.scss';
+import homeStyles from '../app/scripts/login/login.scss';
+import counterStyles from '../app/scripts/home/home.scss';
 
 const delay = time => new Promise(resolve => setTimeout(resolve, time));
 
