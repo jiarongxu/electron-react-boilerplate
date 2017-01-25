@@ -6,7 +6,7 @@ import * as HomeActions from './homeAction';
 function mapStateToProps(state) {
   console.log(state);
   return {
-    home: state.home
+    home: state.home,
   };
 }
 

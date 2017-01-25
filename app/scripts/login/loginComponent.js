@@ -8,6 +8,7 @@ import {TextInput, Label, Button} from 'react-desktop/macOs';
 export default class Home extends Component {
 
   props: {
+    checkAuth: () => void,
     submitLoginInfo: () => void
   };
 
@@ -18,6 +19,10 @@ export default class Home extends Component {
     this.handleChangeForEmail = this.handleChangeForEmail.bind(this);
     this.handleChangeForPassword = this.handleChangeForPassword.bind(this);
     this.submitLoginInfo = this.submitLoginInfo.bind(this);
+  }
+
+  componentWillMount () {
+    this.props.checkAuth();
   }
 
   handleChangeForEmail (event) {
@@ -38,28 +43,28 @@ export default class Home extends Component {
 
     return (
       <div>
-        <div className={styles.container}>
+        <div className='container'>
           <img src="./images/workplaceLogo.png" alt="workplace logo"/>
         </div>
-        <div className={styles.loginForm}>
-          <div className={`counter clearfix ${styles.formElement}`}>
+        <div className='loginForm'>
+          <div className='counter clearfix formElement'>
             <TextInput
               label="Email"
-              placeholder="My Input"
+              placeholder=""
               defaultValue=""
               onChange={this.handleChangeForEmail}
             />
           </div>
-          <div className={`counter clearfix ${styles.formElement}`}>
+          <div className='counter clearfix formElement'>
             <TextInput
               label="Password"
-              placeholder="My Input"
               defaultValue=""
+              password
               onChange={this.handleChangeForPassword}
             />
           </div>
 
-          <div className={`clearfix ${styles.bottomButton}`}>
+          <div className='clearfix ${styles.bottomButton'>
             <a className="link">Get help</a>
             <div className="pull-right">
               <Button  color="white" onClick={this.submitLoginInfo}>

@@ -1,9 +1,9 @@
 // @flow
 import React, { Component } from 'react';
-import Home from './loginComponent';
+import Login from './loginComponent';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as HomeActions from './loginAction';
+import * as loginActions from './loginAction';
 
 // export default class HomePage extends Component {
 //   render() {
@@ -20,7 +20,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(HomeActions, dispatch);
+  return bindActionCreators(loginActions, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

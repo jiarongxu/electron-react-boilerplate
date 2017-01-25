@@ -1,13 +1,13 @@
 // @flow
-import { UPDATE_APPS, DECREMENT_COUNTER } from './homeAction';
+import { UPDATE_APPS, UPDATE_RECENT_FILES } from './homeAction';
 
 export default function counter(state = {}, action: Object) {
   console.log(action);
   switch (action.type) {
     case UPDATE_APPS:
       return Object.assign({}, state, {apps: action.apps});
-    case DECREMENT_COUNTER:
-      return state - 1;
+    case UPDATE_RECENT_FILES:
+      return Object.assign({}, state, {recentFiles: action.recentFiles});
     default:
       return state;
   }

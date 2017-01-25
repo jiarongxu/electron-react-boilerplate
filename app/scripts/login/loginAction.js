@@ -12,12 +12,17 @@ const {ipcRenderer} = require('electron');
 
 export const SUBMIT_LOGIN_INFO = 'SUBMIT_LOGIN_INFO';
 
+function goToHome() {
+  hashHistory.push('/counter');
+  ipcRenderer.send('setWindow')
+}
+
 export function submitLoginInfo(username, password) {
   console.log(username + ' ' + password);
 
 
   return dispatch => {
-    return $http('post','https://os33.os33.com/api/auth/v2/login', {
+    return $http('post','https://www.os33dev.net/api/auth/v2/login', {
       headers: {
         'X-Token-Required': true,
         'Content-Type': 'application/json;charset=UTF-8',
@@ -37,7 +42,14 @@ export function submitLoginInfo(username, password) {
   }
 }
 
-function goToHome() {
-  hashHistory.push('/counter');
-  ipcRenderer.send('setWindow')
+
+
+export function checkAuth () {
+  return dispatch => {
+    // storage.get('requestId', function(error, data) {
+    //   if(data){
+    //     goToHome();
+    //   }
+    // });
+  }
 }
